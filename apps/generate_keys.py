@@ -43,14 +43,15 @@ def main():
     with st.expander("Public Key"):
         st.code(public_pem.decode("utf-8"))
 
-    st.download_button("Download Private Key",
-                       data=private_pem,
-                       file_name="private_key.pem",
-                       mime="application/x-pem-file")
-    st.download_button("Download Public Key",
-                       data=public_pem,
-                       file_name="public_key.pem",
-                       mime="application/x-pem-file")
+    st.button("Refresh Keys")
+    # st.download_button("Download Private Key",
+    #                    data=private_pem,
+    #                    file_name="private_key.pem",
+    #                    mime="application/x-pem-file")
+    # st.download_button("Download Public Key",
+    #                    data=public_pem,
+    #                    file_name="public_key.pem",
+    #                    mime="application/x-pem-file")
 
 
 if __name__ == '__main__':
