@@ -30,4 +30,4 @@ the `_environment.yml` or `requirements.txt` files. Once the dependencies are in
 
 ### Live demo
 You can check its live demo here:
-[https://share.streamlit.io/kavehbc/jwt-tokenizer/main.py](https://share.streamlit.io/kavehbc/jwt-tokenizer/main.py)
+[https://share.streamlit.io/kavehbc/crypto-tools/main.py](https://share.streamlit.io/kavehbc/crypto-tools/main.py)
