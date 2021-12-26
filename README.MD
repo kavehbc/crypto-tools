@@ -7,3 +7,7 @@ In order to run this app, you need to install the dependencies first based on
 `streamlit`.
 
     streamlit run ./main.py
+
+### Live demo
+You can check its live demo here:
+[https://share.streamlit.io/kavehbc/jwt-tokenizer/main.py](https://share.streamlit.io/kavehbc/jwt-tokenizer/main.py)
