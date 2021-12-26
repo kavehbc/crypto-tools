@@ -1,4 +1,4 @@
-name: JWT-Tokenizer
+name: crypto-tools
 channels:
   - defaults
   - conda-forge
