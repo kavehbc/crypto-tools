@@ -45,7 +45,7 @@ Once you run it, you can open it in your browser on [http://127.0.0.1](http://12
 
 ### Live demo
 You can check its live demo here:
-[https://share.streamlit.io/kavehbc/crypto-tools/main.py](https://share.streamlit.io/kavehbc/crypto-tools/main.py)
+[https://crypto-tools.streamlitapp.com/](https://crypto-tools.streamlitapp.com/)
 
 ___
 ## Github Repo
