@@ -34,7 +34,7 @@ the `_environment.yml` or `requirements.txt` files. Once the dependencies are in
 ### Run on Docker
 This application is available on [Docker Hub](https://hub.docker.com/r/kavehbc/crypto-tools), and it can be run directly using:
 
-    docker run -p 8501:80 kavehbc/crypto-tools
+    docker run -p 80:8501 kavehbc/crypto-tools
 
 Once you run it, you can open it in your browser on [http://127.0.0.1](http://127.0.0.1).
 
