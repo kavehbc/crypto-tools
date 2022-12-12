@@ -13,7 +13,9 @@ def utf8(s: bytes):
 
 def main():
     st.title("Generate RSA Keys")
-    key_size = int(st.number_input("Key Size", value=4096, min_value=256, step=1))
+    key_size_options = [128, 256, 1024, 2048, 4096]
+
+    key_size = int(st.selectbox("Key Size", options=key_size_options, index=len(key_size_options) - 1))
     private_key = rsa.generate_private_key(
         public_exponent=65537,
         key_size=key_size,

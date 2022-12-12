@@ -8,7 +8,7 @@ from cryptography.hazmat.backends import default_backend
 
 
 def main():
-    st.title("RSA Verifier")
+    st.title("RSA Signature Verifier")
     public_key_file = st.file_uploader("Public Key", type=["pem"])
     signature_file = st.file_uploader("Signature File")
     data_file = st.file_uploader("Data File")

@@ -9,7 +9,7 @@ def utf8(s: bytes):
 
 def main():
     st.title("Fernet Encryption")
-    key_option = st.radio("Key Option", options=["Manual", "Generate"])
+    key_option = st.radio("Key Option", options=["Manual", "Generate"], horizontal=True)
     if key_option == "Generate":
         key = Fernet.generate_key()
         st.code(utf8(key))

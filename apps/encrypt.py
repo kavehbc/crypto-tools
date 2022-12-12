@@ -14,60 +14,67 @@ def utf8(s: bytes):
 def main():
     st.title("RSA Encrypt/Decrypt")
 
-    private_key_file = st.file_uploader("Private Key", type=["pem"])
-    public_key_file = st.file_uploader("Public Key", type=["pem"])
+    key_file = st.file_uploader("Public/Private Key", type=["pem"])
 
-    if private_key_file:
-        private_key = serialization.load_pem_private_key(
-            private_key_file.getvalue(),
-            password=None,
-            backend=default_backend()
-        )
-    else:
-        private_key = None
+    private_key = None
+    if key_file:
+        try:
+            key = serialization.load_pem_private_key(
+                key_file.getvalue(),
+                password=None,
+                backend=default_backend()
+            )
+            private_key = 1
+        except:
+            key = serialization.load_pem_public_key(
+                key_file.getvalue(),
+                backend=default_backend()
+            )
+            private_key = 0
 
-    if public_key_file:
-        public_key = serialization.load_pem_public_key(
-            public_key_file.getvalue(),
-            backend=default_backend()
-        )
-    else:
-        public_key = None
+    if private_key == 1:
+        st.success("Private key is provided")
+    elif private_key == 0:
+        st.success("Public key is provided")
 
     plaintext = st.text_area("Data Content")
     bytes_data = str.encode(plaintext)
 
-    btn_encrypt = st.button("Encrypt")
-    st.caption("You can only encrypt data as large as the RSA key length.")
+    if private_key == 0:
+        btn_encrypt = st.button("Encrypt")
+        st.caption("You can only encrypt data as large as the RSA key length.")
+    if private_key == 1:
+        btn_decrypt = st.button("Decrypt")
 
-    if btn_encrypt:
-        if public_key is None:
-            st.error("Public Key is required to encrypt")
-        else:
-            encrypted = base64.b64encode(public_key.encrypt(
-                bytes_data,
-                padding.OAEP(
-                    mgf=padding.MGF1(algorithm=hashes.SHA256()),
-                    algorithm=hashes.SHA256(),
-                    label=None
-                )
-            ))
-            st.code(f'{utf8(encrypted)}')
+    if private_key == 0:
+        if btn_encrypt:
+            if key_file is None:
+                st.error("Key is required")
+            else:
+                encrypted = base64.b64encode(key.encrypt(
+                    bytes_data,
+                    padding.OAEP(
+                        mgf=padding.MGF1(algorithm=hashes.SHA256()),
+                        algorithm=hashes.SHA256(),
+                        label=None
+                    )
+                ))
+                st.code(f'{utf8(encrypted)}')
 
-    btn_decrypt = st.button("Decrypt")
-    if btn_decrypt:
-        if private_key is None:
-            st.error("Private Key is required to encrypt")
-        else:
-            decrypted = private_key.decrypt(
-                base64.b64decode(bytes_data),
-                padding.OAEP(
-                    mgf=padding.MGF1(algorithm=hashes.SHA256()),
-                    algorithm=hashes.SHA256(),
-                    label=None
+    if private_key == 1:
+        if btn_decrypt:
+            if key_file is None:
+                st.error("Key is required")
+            else:
+                decrypted = key.decrypt(
+                    base64.b64decode(bytes_data),
+                    padding.OAEP(
+                        mgf=padding.MGF1(algorithm=hashes.SHA256()),
+                        algorithm=hashes.SHA256(),
+                        label=None
+                    )
                 )
-            )
-            st.code(f'{utf8(decrypted)}')
+                st.code(f'{utf8(decrypted)}')
 
 
 if __name__ == '__main__':
