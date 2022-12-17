@@ -7,5 +7,6 @@ dependencies:
   - pip
   - pip:
       - streamlit
+      - streamlit-option-menu
       - cryptography
       - pyjwt

@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 from apps import *
 
 lst_apps = {"home": "Home",
@@ -13,22 +14,14 @@ lst_apps = {"home": "Home",
 
 
 def main():
-    st.set_page_config(page_title="Crypto Toolbox",
-                       page_icon=None,
-                       layout="centered",
-                       initial_sidebar_state="auto",
-                       menu_items={
-                           'Get Help': 'https://github.com/kavehbc/crypto-tools',
-                           'Report a bug': "https://github.com/kavehbc/crypto-tools/issues",
-                           'About': """
-                               # Crypto Toolbox
-                               
-                               Handy tools for your daily cryptography needs
-                           """
-                       })
+    with st.sidebar:
+        selected = option_menu(menu_title="Crypto Tools", options=list(lst_apps.values()),
+                               icons=['house'],
+                               menu_icon="cast", default_index=0)
+        app = list(lst_apps.keys())[list(lst_apps.values()).index(selected)]
 
-    app = st.sidebar.selectbox("Menu", options=lst_apps.keys(),
-                               format_func=lambda x: lst_apps[x])
+    # app = st.sidebar.selectbox("Menu", options=lst_apps.keys(),
+    #                            format_func=lambda x: lst_apps[x])
     if app == "home":
         apps.home.main()
     if app == "about":
@@ -51,4 +44,17 @@ def main():
 
 
 if __name__ == '__main__':
+    st.set_page_config(page_title="Crypto Toolbox",
+                       page_icon=None,
+                       layout="centered",
+                       initial_sidebar_state="auto",
+                       menu_items={
+                           'Get Help': 'https://github.com/kavehbc/crypto-tools',
+                           'Report a bug': "https://github.com/kavehbc/crypto-tools/issues",
+                           'About': """
+                               # Crypto Toolbox
+
+                               Handy tools for your daily cryptography needs
+                           """
+                       })
     main()
