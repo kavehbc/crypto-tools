@@ -9,7 +9,8 @@ lst_apps = {"home": "Home",
             "sign": "RSA Sign",
             "verify": "RSA Verify Signature",
             "fernet": "Fernet Encryption",
-            "base64": "Base64 Encoder/Decoder",
+            "hash": "Hash Encoder",
+            "base64": "Base64",
             "about": "About Crypto Tools"}
 
 
@@ -39,6 +40,8 @@ def main():
         apps.verifier.main()
     if app == "fernet":
         apps.fernet.main()
+    if app == "hash":
+        apps.hash.main()
     if app == "base64":
         apps.base.main()
 

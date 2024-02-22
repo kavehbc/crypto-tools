@@ -20,6 +20,10 @@ Validating the digital signature using RSA public key. The digital signature has
 ### Fernet
 Encrypting/Decrypting files using Fernet.
 
+### Hash Algorithms
+Encoding a file or a text using `sha1`, `sha224`, `sha256`, `sha384`, `sha512`, `sha3_224`, `sha3_256`, `sha3_384`,
+`sha3_512`, `shake_128`, `shake_256`, `blake2b`, `blake2s`, and `md5`.
+
 ### Base64
 Encoding/Decoding files/text using Base64.
 
@@ -38,23 +42,17 @@ This application is available on [Docker Hub](https://hub.docker.com/r/kavehbc/c
 
 Once you run it, you can open it in your browser on [http://127.0.0.1](http://127.0.0.1).
 
-> **Apple M1 Silicon - Arm64**
-> 
-> As of today (`Dec 2021`), this Docker Image is not compatible with `Apple M1 Silicon`.
-> Instead, the source code can be run using `conda` on `Rosetta 2`.
-
 ### Live demo
 You can check its live demo here:
-[https://crypto-tools.streamlitapp.com/](https://crypto-tools.streamlitapp.com/)
+[https://crypto-tools.streamlit.app](https://crypto-tools.streamlit.app)
 
 ___
-## Github Repo
+## GitHub Repo
 This project is open-source, and it is available on Github at [https://github.com/kavehbc/crypto-tools](https://github.com/kavehbc/crypto-tools).
 
 ## Developer(s)
 Kaveh Bakhtiyari - [Website](http://bakhtiyari.com) | [Medium](https://medium.com/@bakhtiyari)
-  | [LinkedIn](https://www.linkedin.com/in/bakhtiyari) | [Github](https://github.com/kavehbc)
+  | [LinkedIn](https://www.linkedin.com/in/bakhtiyari) | [GitHub](https://github.com/kavehbc)
 
 ## Contribution
 Feel free to join the open-source community and contribute to this repository.
-

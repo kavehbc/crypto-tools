@@ -6,4 +6,5 @@ import apps.encrypt
 import apps.sign
 import apps.verifier
 import apps.fernet
+import apps.hash
 import apps.base
