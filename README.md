@@ -27,6 +27,9 @@ Encoding a file or a text using `sha1`, `sha224`, `sha256`, `sha384`, `sha512`, 
 ### Base64
 Encoding/Decoding files/text using Base64.
 
+## Screenshot
+![App Screenshot](screenshot/crypto-tools.png "App Screenshot")
+
 ___
 ## Run
 In order to run this app, you need to install the dependencies first based on
