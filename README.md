@@ -27,6 +27,9 @@ Encoding a file or a text using `sha1`, `sha224`, `sha256`, `sha384`, `sha512`, 
 ### Base64
 Encoding/Decoding files/text using Base64.
 
+### One-Time Password (OTP)
+Time-Based and Counter-Based One-Time Passwords based on Base32 secret.
+
 ## Screenshot
 ![App Screenshot](screenshot/crypto-tools.png "App Screenshot")
 

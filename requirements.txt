@@ -2,3 +2,5 @@ streamlit
 streamlit-option-menu
 pyjwt
 cryptography
+pyotp
+qrcode

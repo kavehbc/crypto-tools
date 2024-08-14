@@ -10,3 +10,5 @@ dependencies:
       - streamlit-option-menu
       - cryptography
       - pyjwt
+      - pyotp
+      - qrcode

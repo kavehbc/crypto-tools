@@ -11,6 +11,7 @@ lst_apps = {"home": "Home",
             "fernet": "Fernet Encryption",
             "hash": "Hash Encoder",
             "base64": "Base64",
+            "otp": "One-Time Password",
             "about": "About Crypto Tools"}
 
 
@@ -44,6 +45,8 @@ def main():
         apps.hash.main()
     if app == "base64":
         apps.base.main()
+    if app == "otp":
+        apps.otp.main()
 
 
 if __name__ == '__main__':
