@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def main():
+def home():
     st.header("Welcome to Crypto Tools")
     st.write("""
         An Open-Source Toolbox for Daily Cryptography Needs
@@ -10,4 +10,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    home()

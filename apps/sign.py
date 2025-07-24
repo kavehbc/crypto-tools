@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.backends import default_backend
 
 
-def main():
+def sign():
     st.title("RSA Sign")
     private_key_file = st.file_uploader("Private Key", type=["pem"])
     data_file = st.file_uploader("Data File")
@@ -44,4 +44,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    sign()

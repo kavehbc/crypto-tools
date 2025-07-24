@@ -3,7 +3,7 @@ import os
 import inspect
 
 
-def main():
+def about():
     current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     parent_dir = os.path.dirname(current_dir)
     markdown_file_path = parent_dir + "/README.md"
@@ -28,4 +28,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    about()

@@ -6,7 +6,7 @@ def utf8(s: bytes):
     return str(s, 'utf-8')
 
 
-def main():
+def base():
     st.title("Base64 Encoder/Decoder")
 
     st.subheader("Encoding")
@@ -45,4 +45,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    base()

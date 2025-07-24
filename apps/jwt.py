@@ -5,7 +5,7 @@ import time
 import datetime
 
 
-def main():
+def jwt():
     st.title("JWT - JSON Web Token")
     algorithms = ["HS256", "HS384", "HS512", "ES256", "ES256K", "ES384", "ES512", "RS256",
                   "RS384", "RS512", "PS256", "PS384", "PS512", "EdDSA"]
@@ -121,4 +121,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    jwt()

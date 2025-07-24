@@ -11,7 +11,7 @@ def generate_base32():
     return secret_base32
 
 
-def main():
+def otp():
     st.title("One-Time Password (OTP)")
     st.markdown("___")
 
@@ -90,4 +90,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    otp()

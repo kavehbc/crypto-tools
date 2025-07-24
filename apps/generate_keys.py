@@ -11,7 +11,7 @@ def utf8(s: bytes):
     return str(s, 'utf-8')
 
 
-def main():
+def generate_keys():
     st.title("Generate RSA Keys")
     key_size_options = [128, 256, 1024, 2048, 4096, 8192]
     key_size = int(st.selectbox("Key Size (bit)", options=key_size_options, index=len(key_size_options) - 1))
@@ -60,4 +60,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    generate_keys()

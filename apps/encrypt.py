@@ -11,7 +11,7 @@ def utf8(s: bytes):
     return str(s, 'utf-8')
 
 
-def main():
+def encrypt():
     st.title("RSA Encrypt/Decrypt")
 
     key_file = st.file_uploader("Public/Private Key", type=["pem"])
@@ -78,4 +78,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    encrypt()

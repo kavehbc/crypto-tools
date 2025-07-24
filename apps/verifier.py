@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.backends import default_backend
 
 
-def main():
+def verifier():
     st.title("RSA Signature Verifier")
     public_key_file = st.file_uploader("Public Key", type=["pem"])
     signature_file = st.file_uploader("Signature File")
@@ -54,4 +54,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    verifier()

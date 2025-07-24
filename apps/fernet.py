@@ -7,7 +7,7 @@ def utf8(s: bytes):
     return str(s, 'utf-8')
 
 
-def main():
+def fernet():
     st.title("Fernet Encryption")
     key_option = st.radio("Key Option", options=["Manual", "Generate"], horizontal=True)
     if key_option == "Generate":
@@ -48,4 +48,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    fernet()

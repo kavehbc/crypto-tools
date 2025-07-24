@@ -6,7 +6,7 @@ def utf8(s: bytes):
     return str(s, 'utf-8')
 
 
-def main():
+def hash():
     st.title("Hash Encoder")
 
     bytes_file = st.file_uploader("Data File")
@@ -31,4 +31,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    hash()
